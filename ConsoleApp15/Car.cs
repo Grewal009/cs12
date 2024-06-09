@@ -1,6 +1,6 @@
 namespace ConsoleApp15;
 
-public class Bil
+public class Car
 {
     //// En bilforhandler har ulike biler i shappa si, det kan være biler med ulike merker, årsmodell, registreringsnummer og kilometerstand. Når kunden kommer inn i shappa skal han kunne se hvilke biler som finnes i shappa, eller han kan velge å finne en bil ut fra årsrange, eller en bil som har kjørt mer eller mindre enn en gitt kilometerstand. Kunden skal også ha mulighet til å kjøpe en av bilene. Bilen må da tilhøre kunden og ikke forhandleren.
 
@@ -14,7 +14,7 @@ public class Bil
     public int Km => _km;
 
 
-    public Bil(string Brand, int YearModel, string ResistrationNumber,int Km)
+    public Car(string Brand, int YearModel, string ResistrationNumber,int Km)
     {
         _brand = Brand;
         _yearModel = YearModel;

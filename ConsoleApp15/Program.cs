@@ -7,12 +7,12 @@ class Program
         //Bilforhandleren
         // En bilforhandler har ulike biler i shappa si, det kan være biler med ulike merker, årsmodell, registreringsnummer og kilometerstand. Når kunden kommer inn i shappa skal han kunne se hvilke biler som finnes i shappa, eller han kan velge å finne en bil ut fra årsrange, eller en bil som har kjørt mer eller mindre enn en gitt kilometerstand. Kunden skal også ha mulighet til å kjøpe en av bilene. Bilen må da tilhøre kunden og ikke forhandleren.
 
-        Bil bil1 = new Bil("Tyota", 2023, "AZ10072", 55000);
-        Bil bil2 = new Bil("BMW", 2022, "AQ55533", 80000);
-        Bil bil3 = new Bil("Opel", 2010, "OP12345", 450000);
-        Bil bil4 = new Bil("Nissan", 2018, "NI23471", 121100);
+        Car bil1 = new Car("Tyota", 2023, "AZ10072", 55000);
+        Car bil2 = new Car("BMW", 2022, "AQ55533", 80000);
+        Car bil3 = new Car("Opel", 2010, "OP12345", 450000);
+        Car bil4 = new Car("Nissan", 2018, "NI23471", 121100);
 
-        List<Bil> cars = new List<Bil>();
+        List<Car> cars = new List<Car>();
         cars.Add(bil1);
         cars.Add(bil2);
         cars.Add(bil3);
@@ -32,7 +32,7 @@ class Program
             case "2":
                 Console.Write("Enter Kilometers: ");
                 int kms = Convert.ToInt32(Console.ReadLine());
-                 List<Bil> result =SearchForKM(kms , cars);
+                 List<Car> result =SearchForKM(kms , cars);
                 Console.WriteLine($"Cars less than or equal to {kms} :");
                 foreach (var car in result)
                 {
@@ -50,9 +50,9 @@ class Program
 
     }
 
-    public static List<Bil> SearchForKM(int kilometer,List<Bil> cars)
+    public static List<Car> SearchForKM(int kilometer,List<Car> cars)
     {
-        List<Bil> newCars = new List<Bil>();
+        List<Car> newCars = new List<Car>();
         for (int i =0;i<cars.Count;i++) {
             if (kilometer>=(cars[i].Km))
             {
